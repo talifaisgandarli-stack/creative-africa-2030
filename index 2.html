@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Creative Africa Rise 2026 — Youth Creative Arts Entrepreneurship Programme</title>
+<meta name="description" content="A pan-African programme turning youth into creative entrepreneurs across 8 art disciplines — powered by DJ Academy Baku, Baku Fashion Week and StockIn Azerbaijan.">
+<meta name="keywords" content="Africa, youth, entrepreneurship, creative arts, DJ, fashion, digital art, film, game design, music production, Azerbaijan, Baku">
+<meta name="author" content="Creative Africa Rise">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph / Social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Creative Africa Rise 2026">
+<meta property="og:description" content="A pan-African programme turning youth into creative entrepreneurs across 8 art disciplines — DJ, fashion, digital art, film, AI tools, game design and more.">
+<meta property="og:image" content="https://og-image-placeholder.png">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creative Africa Rise 2026">
+<meta name="twitter:description" content="Turning African youth into creative entrepreneurs — powered by Azerbaijan's leading creative institutions.">
+
+<!-- Favicon (inline SVG as data URI — no separate file needed) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230f0f0e'/><text y='22' x='5' font-size='20' font-family='serif'>🎨</text></svg>">
+
+<!-- Fonts with display=swap for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  --ink:     #111110;
+  --ink2:    #3d3d3b;
+  --muted:   #7a7975;
+  --faint:   #b5b2ac;
+  --gold:    #b8832a;
+  --gold-bg: #fdf6ec;
+  --page:    #f8f5f0;
+  --card:    #ffffff;
+  --border:  #e8e3db;
+  --hero:    #0f0f0e;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--page);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+#nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: stretch;
+  padding: 0 48px;
+  height: 52px;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+#nav::-webkit-scrollbar { display: none; }
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0 18px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+  cursor: pointer;
+}
+.nav-tab:hover { color: var(--ink); }
+.nav-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+/* ── HERO ── */
+#hero {
+  background: var(--hero);
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  padding: 80px 64px;
+  gap: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left { display: flex; flex-direction: column; justify-content: flex-end; }
+
+.hero-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.hero-title em { color: var(--gold); font-style: normal; }
+
+.hero-desc {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.chip-gold { border: 1px solid var(--gold); color: var(--gold); background: transparent; }
+.chip-dim  { border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.55); background: transparent; }
+
+.hero-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.07);
+  align-self: end;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.04);
+  padding: 28px 24px;
+}
+.hero-stat-n {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.hero-stat-l {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── SECTION WRAPPER ── */
+.sec {
+  padding: 72px 64px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-alt { background: #fff; }
+
+.sec-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.sec-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(30px, 3.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.sec-desc {
+  font-size: 15px;
+  color: var(--muted);
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 48px;
+}
+
+/* ── OVERVIEW STATS ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 40px;
+}
+.stat-box {
+  background: #fff;
+  padding: 28px 24px;
+  text-align: center;
+}
+.stat-n {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 4px;
+  line-height: 1;
+}
+.stat-l {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.overview-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--ink2);
+  max-width: 680px;
+}
+
+/* ── PARTNERS ── */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 1px;
+}
+.partner-card {
+  background: #fff;
+  padding: 32px 28px;
+  position: relative;
+  transition: background 0.15s;
+}
+.partner-card:hover { background: var(--page); }
+.partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--pc, var(--gold));
+}
+.p-flag { font-size: 24px; margin-bottom: 12px; display: block; }
+.p-name {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.p-loc {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 12px;
+}
+.p-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+.p-role-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.p-role-item {
+  font-size: 12.5px;
+  color: var(--muted);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+.p-role-item:last-of-type { border-bottom: none; }
+.p-badge {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.b-blue  { background: rgba(0,100,200,0.07); color: #0055bb; border: 1px solid rgba(0,100,200,0.15); }
+.b-red   { background: rgba(180,40,40,0.07); color: #a02020; border: 1px solid rgba(180,40,40,0.15); }
+.b-green { background: rgba(30,140,80,0.07); color: #1a7040; border: 1px solid rgba(30,140,80,0.15); }
+
+.pm-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 36px;
+  margin-top: 1px;
+}
+.pm-title {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.pm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.pm-item strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+.pm-item { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── TRACKS ── */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.track-card {
+  background: #fff;
+  padding: 24px 20px;
+  position: relative;
+  transition: background 0.15s;
+  border-left: 3px solid var(--tc, var(--gold));
+}
+.track-card:hover { background: var(--page); }
+.t-icon { font-size: 26px; margin-bottom: 10px; display: block; }
+.t-name {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.t-desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-bottom: 12px; }
+.t-skills { display: flex; flex-wrap: wrap; gap: 4px; }
+.t-skill {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border: 1px solid rgba(184,131,42,0.2);
+}
+.t-az {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* ── FORMATS ── */
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.format-col {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.f-head {
+  padding: 24px;
+  border-bottom: 2px solid var(--fc, var(--gold));
+}
+.f-type {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fc, var(--gold));
+  margin-bottom: 6px;
+}
+.f-title {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.f-dur { font-size: 12px; color: var(--muted); }
+.f-stats {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+.fst { flex: 1; padding: 14px; border-right: 1px solid var(--border); text-align: center; }
+.fst:last-child { border-right: none; }
+.fst-n {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--fc, var(--gold));
+  line-height: 1;
+}
+.fst-l {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-top: 2px;
+}
+.f-note {
+  padding: 12px 16px;
+  font-size: 11.5px;
+  color: #155e40;
+  background: rgba(30,140,80,0.06);
+  border-bottom: 1px solid rgba(30,140,80,0.12);
+  line-height: 1.6;
+}
+.f-note strong { display: block; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; color: #0f7040; }
+.f-ov {
+  padding: 16px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.7;
+  border-bottom: 1px solid var(--border);
+}
+.tl-head {
+  padding: 10px 16px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fc, var(--gold));
+  background: var(--page);
+  border-bottom: 1px solid var(--border);
+}
+.tl-body { padding: 14px 16px 24px; flex: 1; }
+.wk { display: flex; gap: 6px; margin-bottom: 8px; align-items: flex-start; }
+.wb {
+  font-size: 8px;
+  font-weight: 700;
+  background: var(--gold-bg);
+  color: var(--gold);
+  border: 1px solid rgba(184,131,42,0.2);
+  padding: 3px 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 3px;
+  margin-top: 1px;
+}
+.wt {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 3px;
+  margin-top: 1px;
+}
+.t  { background: rgba(30,140,80,0.08);  color: #1a7040; }
+.m  { background: rgba(120,60,160,0.08); color: #7030a0; }
+.d  { background: rgba(210,100,20,0.08); color: #b85010; }
+.s  { background: rgba(184,131,42,0.12); color: var(--gold); }
+.c  { background: rgba(20,160,140,0.08); color: #0e7060; }
+.wc { font-size: 11px; color: var(--muted); line-height: 1.5; padding-top: 2px; }
+
+/* ── PRIZES ── */
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.prize-card {
+  background: #fff;
+  padding: 22px 18px;
+  transition: background 0.15s;
+}
+.prize-card:hover { background: var(--page); }
+.pz-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+.pz-track {
+  font-family: 'Fraunces', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.pz-tier {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  margin-bottom: 5px;
+}
+.pz-tier:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.pz-item { font-size: 11px; color: var(--muted); padding: 3px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.pz-item:last-child { border-bottom: none; }
+.pz-item strong {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink2);
+  margin-bottom: 1px;
+}
+
+/* ── BUDGET ── */
+.budget-sum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+.bs {
+  padding: 32px 28px;
+  background: #fff;
+}
+.bs-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.bs-amt {
+  font-family: 'Fraunces', serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.bs-note { font-size: 12.5px; color: var(--muted); line-height: 1.65; }
+.bs-note b { color: var(--ink2); font-weight: 600; }
+.g { color: #1a7040; }
+.v { color: #7030a0; }
+.tl { color: #0e7060; }
+
+table.bt { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.bt thead th {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--border);
+  background: var(--page);
+}
+table.bt td { padding: 8px 14px; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+table.bt tr:hover td { background: var(--gold-bg); }
+table.bt .cat td {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-bg);
+  border-top: 1px solid var(--border);
+  padding: 10px 14px;
+}
+table.bt .tot td {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  border-top: 2px solid var(--border);
+  border-bottom: none;
+  background: var(--page);
+  padding: 14px;
+}
+table.bt .cph td {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--faint);
+  border-bottom: 1px solid var(--border);
+  background: var(--page);
+  padding: 5px 14px 10px;
+}
+.ag { color: #1a7040 !important; font-weight: 600; }
+.av { color: #7030a0 !important; font-weight: 600; }
+.at { color: #0e7060 !important; font-weight: 600; }
+.nt { font-size: 10.5px !important; color: var(--faint) !important; line-height: 1.5; }
+
+.b-note {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-left: 3px solid #1abc9c;
+  background: rgba(26,188,156,0.05);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.b-note strong { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0e7060; margin-bottom: 4px; }
+
+.fund-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-top: 20px;
+}
+.fund-card { padding: 24px; background: #fff; }
+.fund-pct {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.fund-card strong { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 6px; }
+.fund-card p { font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--hero);
+  color: rgba(255,255,255,0.4);
+  padding: 56px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+}
+.f-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.07);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.f-meta { font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.9; }
+.f-right { text-align: right; font-size: 12px; color: rgba(255,255,255,0.3); line-height: 1.9; max-width: 300px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #hero { grid-template-columns: 1fr; padding: 48px 24px; }
+  .hero-right { margin-top: 32px; }
+  .sec { padding: 52px 24px; }
+  #nav { padding: 0 20px; }
+  .partner-grid, .tracks-grid, .format-grid, .prizes-grid,
+  .budget-sum, .pm-grid, .fund-grid, .stat-row { grid-template-columns: 1fr; }
+  footer { padding: 40px 24px; flex-direction: column; align-items: flex-start; }
+  .f-right { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section id="s-hero">
+<div id="hero">
+  <div class="hero-left">
+    <div class="hero-label">Africa — Creative Economy · 2026</div>
+    <h1 class="hero-title">Creative<br><em>Africa</em> Rise<br>2026</h1>
+    <p class="hero-desc">Turning African youth into creative entrepreneurs across 8 art disciplines — powered by DJ Academy Baku, Baku Fashion Week and StockIn Azerbaijan.</p>
+    <div class="hero-chips">
+      <span class="chip chip-gold">April – December 2026</span>
+      <span class="chip chip-dim">Ministry of Youth</span>
+      <span class="chip chip-dim">DJ Academy Baku</span>
+      <span class="chip chip-dim">Baku Fashion Week</span>
+      <span class="chip chip-dim">StockIn AZ</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-stat">
+      <div class="hero-stat-n">8</div>
+      <div class="hero-stat-l">Creative Tracks</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">3</div>
+      <div class="hero-stat-l">AZ Partners</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">3</div>
+      <div class="hero-stat-l">Formats</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-n">∞</div>
+      <div class="hero-stat-l">Online Reach</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══════════════ STICKY NAV ══════════════ -->
+<nav id="nav">
+  <a class="nav-tab" href="#s-overview">Overview</a>
+  <a class="nav-tab" href="#s-partners">AZ Partners</a>
+  <a class="nav-tab" href="#s-tracks">8 Tracks</a>
+  <a class="nav-tab" href="#s-formats">Programmes</a>
+  <a class="nav-tab" href="#s-prizes">Prizes</a>
+  <a class="nav-tab" href="#s-budget">Budget</a>
+</nav>
+
+<!-- ══════════════ OVERVIEW ══════════════ -->
+<section id="s-overview" class="sec sec-alt">
+  <div class="sec-label">Programme Overview</div>
+  <h2 class="sec-title">About the Programme</h2>
+
+  <p class="overview-body">A pan-African programme pairing deep skills training with real entrepreneurship. Running across three delivery formats — a 3-month intensive, a 6-month journey, and a permanent online platform — it builds the next generation of African creative entrepreneurs in digital art, music, fashion, film, AI tools and more.</p>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-n">8</div><div class="stat-l">Creative Tracks</div></div>
+    <div class="stat-box"><div class="stat-n">3</div><div class="stat-l">Programme Formats</div></div>
+    <div class="stat-box"><div class="stat-n">3</div><div class="stat-l">Azerbaijan Partners</div></div>
+    <div class="stat-box"><div class="stat-n">∞</div><div class="stat-l">Online Reach</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ PARTNERS ══════════════ -->
+<section id="s-partners" class="sec">
+  <div class="sec-label">Strategic Partners from Azerbaijan</div>
+  <h2 class="sec-title">Powered by Baku.</h2>
+  <p class="sec-desc">Three Azerbaijani creative institutions contribute their expertise, networks and community — connecting African participants with real industry practitioners and international creative ecosystems.</p>
+
+  <div class="partner-grid">
+
+    <div class="partner-card" style="--pc:#0055bb;">
+      <span class="p-flag">🎧</span>
+      <div class="p-name">DJ Academy Baku</div>
+      <div class="p-loc">🇦🇿 Baku, Azerbaijan</div>
+      <div class="p-desc">Premier DJ and electronic music school in the Caucasus. Curriculum covers turntablism, music production, live performance and the business of electronic music.</div>
+      <div class="p-role-label">Contribution</div>
+      <div class="p-role-item">Certified DJ curriculum and training materials</div>
+      <div class="p-role-item">Expert instructors for in-person teaching residencies</div>
+      <div class="p-role-item">Access to DJ Academy Baku professional network</div>
+      <div class="p-role-item">Community connection for graduates — ongoing industry ties</div>
+      <div class="p-role-item">Co-certification of graduates with DJ Academy credential</div>
+      <span class="p-badge b-blue">🎧 DJ & Electronic Music</span>
+    </div>
+
+    <div class="partner-card" style="--pc:#a02020;">
+      <span class="p-flag">👗</span>
+      <div class="p-name">Baku Fashion Week</div>
+      <div class="p-loc">🇦🇿 Baku, Azerbaijan</div>
+      <div class="p-desc">Azerbaijan's flagship international fashion platform, connecting Caucasian and Central Asian designers with European buyers, press and industry.</div>
+      <div class="p-role-label">Contribution</div>
+      <div class="p-role-item">Fashion business and runway production expertise</div>
+      <div class="p-role-item">Access to BFW buyer, agent and fashion press network</div>
+      <div class="p-role-item">Masterclass series: "Designing for Global Markets"</div>
+      <div class="p-role-item">Platform connection for graduates with international fashion industry</div>
+      <div class="p-role-item">Annual African emerging designer feature within BFW community</div>
+      <span class="p-badge b-red">👗 Fashion & Textile</span>
+    </div>
+
+    <div class="partner-card" style="--pc:#1a7040;">
+      <span class="p-flag">✂️</span>
+      <div class="p-name">StockIn Fashion Community</div>
+      <div class="p-loc">🇦🇿 Baku, Azerbaijan</div>
+      <div class="p-desc">Azerbaijan's leading fashion designer collective — 200+ members across ready-to-wear, textiles and sustainable fashion. Experts in blending Eastern craft with commercial design.</div>
+      <div class="p-role-label">Contribution</div>
+      <div class="p-role-item">1-on-1 mentor matching with StockIn designers</div>
+      <div class="p-role-item">Textile and sustainable materials knowledge</div>
+      <div class="p-role-item">Guest portfolio critique sessions each cohort</div>
+      <div class="p-role-item">Graduates join StockIn digital alumni network</div>
+      <div class="p-role-item">Co-branded capsule collection for top graduate</div>
+      <span class="p-badge b-green">✂️ Fashion & Textile</span>
+    </div>
+
+  </div>
+
+  <div class="pm-box">
+    <div class="pm-title">How the Partnership Works</div>
+    <div class="pm-grid">
+      <div class="pm-item"><strong>Expert Teaching</strong>AZ practitioners teach, mentor and assess. Curriculum shaped by working industry professionals — not generic educators or textbooks.</div>
+      <div class="pm-item"><strong>Teaching Residencies</strong>DJ Academy Baku: 1 instructor per cohort residency. BFW + StockIn: 4 online masterclasses/year + 1 in-person workshop per 6-month cohort.</div>
+      <div class="pm-item"><strong>Network Access</strong>Participants connect directly with AZ partners' professional networks — buyers, industry contacts, creative communities across the Caucasus and Europe.</div>
+      <div class="pm-item"><strong>Community & Mentorship</strong>1-on-1 matching with AZ practitioners. Ongoing peer community that stays active well beyond graduation.</div>
+      <div class="pm-item"><strong>Co-Certification</strong>Graduates receive the programme certificate plus a partner-endorsed credential, recognised within AZ professional networks.</div>
+      <div class="pm-item"><strong>Alumni Network</strong>Shared digital community connecting African creatives with AZ experts and collaborators — a lasting professional relationship.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TRACKS ══════════════ -->
+<section id="s-tracks" class="sec sec-alt">
+  <div class="sec-label">Creative Tracks</div>
+  <h2 class="sec-title">Eight Paths. One Mission.</h2>
+  <p class="sec-desc">Youth select one track at enrolment. Each has a dedicated instructor, technical curriculum, mentor network and prize category.</p>
+
+  <div class="tracks-grid">
+
+    <div class="track-card" style="--tc:#b8832a;">
+      <span class="t-icon">🎨</span>
+      <div class="t-name">Digital Art & Illustration</div>
+      <div class="t-desc">Build a visual brand, sell works globally through design marketplaces and NFTs. Master client work, licensing and creative studio building.</div>
+      <div class="t-skills"><span class="t-skill">Procreate</span><span class="t-skill">Adobe</span><span class="t-skill">NFT</span><span class="t-skill">Brand</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#0055bb;">
+      <span class="t-icon">🎧</span>
+      <div class="t-name">DJ & Electronic Music</div>
+      <div class="t-desc">From beatmatching to Afrobeats production. Live performance, music business, digital distribution, and building a fanbase across Africa and Europe.</div>
+      <div class="t-skills"><span class="t-skill">Pioneer DJ</span><span class="t-skill">Ableton</span><span class="t-skill">Music Biz</span></div>
+      <span class="t-az b-blue">🎧 DJ Academy Baku</span>
+    </div>
+
+    <div class="track-card" style="--tc:#7030a0;">
+      <span class="t-icon">🤖</span>
+      <div class="t-name">AI-Powered Creative Tools</div>
+      <div class="t-desc">Generate, create and productise using AI. From image generation to launching AI-native creative businesses. Prompt engineering and monetisation.</div>
+      <div class="t-skills"><span class="t-skill">Midjourney</span><span class="t-skill">Runway ML</span><span class="t-skill">AI Biz</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#0e7060;">
+      <span class="t-icon">🎬</span>
+      <div class="t-name">Video Content & Film</div>
+      <div class="t-desc">Short-form content, documentary and music video production. Monetise on YouTube, TikTok and pitch to streaming platforms and NGO clients.</div>
+      <div class="t-skills"><span class="t-skill">DaVinci</span><span class="t-skill">CapCut Pro</span><span class="t-skill">Storytelling</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#b85010;">
+      <span class="t-icon">🎮</span>
+      <div class="t-name">Game Design & Dev</div>
+      <div class="t-desc">Build games rooted in African culture and mythology. Learn Unity/Godot and launch on mobile and PC. Africa's game market is one of the fastest growing globally.</div>
+      <div class="t-skills"><span class="t-skill">Unity</span><span class="t-skill">Godot</span><span class="t-skill">App Stores</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#1a7040;">
+      <span class="t-icon">📸</span>
+      <div class="t-name">Photography & Visual Storytelling</div>
+      <div class="t-desc">Documentary and commercial photography, editing, licensing and working with brands, NGOs and editorial clients across Africa and globally.</div>
+      <div class="t-skills"><span class="t-skill">Lightroom</span><span class="t-skill">Licensing</span><span class="t-skill">Client Work</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#a02020;">
+      <span class="t-icon">🎤</span>
+      <div class="t-name">Music Production & Songwriting</div>
+      <div class="t-desc">Afrobeats to Amapiano — produce, mix and distribute original music. Build a label or go fully independent with global streaming reach.</div>
+      <div class="t-skills"><span class="t-skill">FL Studio</span><span class="t-skill">Logic Pro</span><span class="t-skill">Distribution</span></div>
+    </div>
+
+    <div class="track-card" style="--tc:#a02020;">
+      <span class="t-icon">🛍️</span>
+      <div class="t-name">Fashion & Textile Innovation</div>
+      <div class="t-desc">Blend African textile heritage with contemporary design. Launch a brand, build e-commerce and connect with global markets through our Baku partners.</div>
+      <div class="t-skills"><span class="t-skill">CLO 3D</span><span class="t-skill">E-Commerce</span><span class="t-skill">Brand</span></div>
+      <span class="t-az b-red" style="margin-right:3px;">👗 BFW</span>
+      <span class="t-az b-green">✂️ StockIn</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ FORMATS ══════════════ -->
+<section id="s-formats" class="sec">
+  <div class="sec-label">Programme Formats</div>
+  <h2 class="sec-title">Choose Your Intensity.</h2>
+  <p class="sec-desc">Three formats, same curriculum depth — different commitment levels. Choose based on context, infrastructure and funding.</p>
+
+  <div class="format-grid">
+
+    <!-- 3 MONTHS -->
+    <div class="format-col" style="--fc:#1a7040;">
+      <div class="f-head">
+        <div class="f-type">Intensive Sprint</div>
+        <div class="f-title">3-Month Sprint</div>
+        <div class="f-dur">12 weeks · in-person · full-time · 35 youth</div>
+      </div>
+      <div class="f-stats">
+        <div class="fst"><div class="fst-n">12</div><div class="fst-l">Weeks</div></div>
+        <div class="fst"><div class="fst-n">35h</div><div class="fst-l">Per Week</div></div>
+        <div class="fst"><div class="fst-n">35</div><div class="fst-l">Cohort</div></div>
+      </div>
+      <div class="f-ov">Bootcamp intensity. Daily sessions, rapid skill-building, a real project launched by week 10. Best for motivated youth who can commit full-time.</div>
+      <div class="tl-head">12-Week Timeline</div>
+      <div class="tl-body">
+        <div class="wk"><div class="wb">WK 1</div><div class="wt t">Teaching</div><div class="wc">Orientation, creative identity, track selection, goal-setting</div></div>
+        <div class="wk"><div class="wb">WK 2–3</div><div class="wt t">Teaching</div><div class="wc">Core technical skills — tool mastery, daily practice. AZ partner intro sessions.</div></div>
+        <div class="wk"><div class="wb">WK 4</div><div class="wt m">Mentoring</div><div class="wc">1-on-1 mentors assigned. First portfolio critique. AZ mentor onboarding.</div></div>
+        <div class="wk"><div class="wb">WK 5–6</div><div class="wt d">Doing</div><div class="wc">First real brief — live client or community commission. Market analysis, pricing.</div></div>
+        <div class="wk"><div class="wb">WK 7</div><div class="wt t">Teaching</div><div class="wc">Business model canvas, contracts, IP basics, social media strategy</div></div>
+        <div class="wk"><div class="wb">WK 8–9</div><div class="wt d">Doing</div><div class="wc">Build & launch — portfolio, EP, collection or product. Go live on at least one platform.</div></div>
+        <div class="wk"><div class="wb">WK 10</div><div class="wt m">Mentoring</div><div class="wc">Investor pitch prep, brand review. DJ Academy Baku faculty live session.</div></div>
+        <div class="wk"><div class="wb">WK 11</div><div class="wt d">Doing</div><div class="wc">Capstone sprint — complete and polish for public showcase</div></div>
+        <div class="wk"><div class="wb">WK 12</div><div class="wt s">Showcase</div><div class="wc">Public Demo Day: exhibition, performances, pitch competition, prize ceremony</div></div>
+      </div>
+    </div>
+
+    <!-- 6 MONTHS -->
+    <div class="format-col" style="--fc:#7030a0;">
+      <div class="f-head">
+        <div class="f-type">Deep Dive Journey</div>
+        <div class="f-title">6-Month Ascent</div>
+        <div class="f-dur">24 weeks · in-person · mixed schedule · 50 youth</div>
+      </div>
+      <div class="f-stats">
+        <div class="fst"><div class="fst-n">24</div><div class="fst-l">Weeks</div></div>
+        <div class="fst"><div class="fst-n">20h</div><div class="fst-l">Per Week</div></div>
+        <div class="fst"><div class="fst-n">50</div><div class="fst-l">Cohort</div></div>
+      </div>
+      <div class="f-ov">The complete entrepreneurial journey. Two phases: deep skills development then market activation. Includes a mid-programme showcase and two AZ expert residencies.</div>
+      <div class="tl-head">24-Week Timeline</div>
+      <div class="tl-body">
+        <div class="wk"><div class="wb">WK 1–2</div><div class="wt t">Teaching</div><div class="wc">Creative identity, African creative economy landscape, track deep-dive</div></div>
+        <div class="wk"><div class="wb">WK 3–6</div><div class="wt t">Teaching</div><div class="wc">Intensive technical training. AZ partners deliver Week 4 masterclasses live.</div></div>
+        <div class="wk"><div class="wb">WK 7–8</div><div class="wt m">Mentoring</div><div class="wc">Mentors matched. Portfolio review. StockIn/BFW critique for fashion track.</div></div>
+        <div class="wk"><div class="wb">WK 9–12</div><div class="wt d">Doing</div><div class="wc">Phase 1 project: real commission or open brief. Build audience on 2 platforms.</div></div>
+        <div class="wk"><div class="wb">WK 13</div><div class="wt s">Showcase</div><div class="wc">Mid-programme exhibition. Internal jury awards. AZ expert feedback.</div></div>
+        <div class="wk"><div class="wb">WK 14–16</div><div class="wt t">Teaching</div><div class="wc">Business & finance: pricing, contracts, IP, grant writing, investor pitches</div></div>
+        <div class="wk"><div class="wb">WK 17–18</div><div class="wt m">Mentoring</div><div class="wc">Cross-track collabs. DJ Academy Baku faculty in-person residency week.</div></div>
+        <div class="wk"><div class="wb">WK 19–22</div><div class="wt d">Doing</div><div class="wc">Phase 2: scale and earn. Launch, generate first revenue, build client pipeline.</div></div>
+        <div class="wk"><div class="wb">WK 23</div><div class="wt m">Mentoring</div><div class="wc">Investor readiness, media training. BFW runway coaching for fashion finalists.</div></div>
+        <div class="wk"><div class="wb">WK 24</div><div class="wt s">Showcase</div><div class="wc">Grand Finale: African Creative Fair — investor pitches, prize ceremony</div></div>
+      </div>
+    </div>
+
+    <!-- ONLINE -->
+    <div class="format-col" style="--fc:#0e7060;">
+      <div class="f-head">
+        <div class="f-type">Evergreen Digital Platform</div>
+        <div class="f-title">Online Forever</div>
+        <div class="f-dur">Permanent · 16-week guided path · self-paced ongoing</div>
+      </div>
+      <div class="f-stats">
+        <div class="fst"><div class="fst-n">16+</div><div class="fst-l">Wk Guided</div></div>
+        <div class="fst"><div class="fst-n">8h</div><div class="fst-l">Min/Week</div></div>
+        <div class="fst"><div class="fst-n">∞</div><div class="fst-l">Users</div></div>
+      </div>
+      <div class="f-note">
+        <strong>Why this costs the most</strong>
+        A permanent platform — not a one-time cohort. Higher investment covers professional video production (~160 modules), custom LMS, 24/7 moderation, ongoing content updates, data bundles for rural participants, and infrastructure designed to run for 5+ years.
+      </div>
+      <div class="f-ov">Accessible on any phone, even low-bandwidth. Structured 16-week guided path, then permanent self-paced access. Weekly live sessions, async mentor hours and monthly content drops.</div>
+      <div class="tl-head">16-Week Path (then self-paced forever)</div>
+      <div class="tl-body">
+        <div class="wk"><div class="wb">WK 1</div><div class="wt c">Online</div><div class="wc">Platform onboarding, community intro, track selection. AZ partner welcome videos.</div></div>
+        <div class="wk"><div class="wb">WK 2–4</div><div class="wt c">Online</div><div class="wc">Core modules (3–5 hrs/wk) + weekly 90-min live session with instructor</div></div>
+        <div class="wk"><div class="wb">WK 5</div><div class="wt c">Community</div><div class="wc">Peer critique challenge: post Week 1–4 work publicly. Community feedback.</div></div>
+        <div class="wk"><div class="wb">WK 6–8</div><div class="wt c">Online</div><div class="wc">Advanced modules + async mentor sessions (2/month). AZ masterclass drops.</div></div>
+        <div class="wk"><div class="wb">WK 9</div><div class="wt d">Doing</div><div class="wc">7-day public challenge: create and publish one real piece of work online.</div></div>
+        <div class="wk"><div class="wb">WK 10–12</div><div class="wt c">Online</div><div class="wc">Monetisation, platform strategy, selling online, pitching to clients</div></div>
+        <div class="wk"><div class="wb">WK 13</div><div class="wt m">Mentoring</div><div class="wc">Global Mentor Day — speed mentoring with African + AZ pros</div></div>
+        <div class="wk"><div class="wb">WK 14–15</div><div class="wt d">Doing</div><div class="wc">Capstone: final portfolio piece or business MVP. Peer + mentor review.</div></div>
+        <div class="wk"><div class="wb">WK 16</div><div class="wt s">Showcase</div><div class="wc">Virtual showcase — livestreamed globally, public voting, jury prizes</div></div>
+        <div class="wk"><div class="wb">WK 17+</div><div class="wt c">Ongoing</div><div class="wc">Platform lives forever. New content monthly. New cohort every 4 months.</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ PRIZES ══════════════ -->
+<section id="s-prizes" class="sec sec-alt">
+  <div class="sec-label">End-of-Programme Prizes</div>
+  <h2 class="sec-title">Win Big. Keep Going.</h2>
+  <p class="sec-desc">Every track has three prize tiers. Not generic cash — career-launching equipment, international experiences and real opportunities to continue.</p>
+
+  <div class="prizes-grid">
+
+    <div class="prize-card">
+      <span class="pz-icon">🎧</span>
+      <div class="pz-track">DJ & Electronic Music</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>Pioneer DDJ-FLX6-GT + studio headphones (~$900)</div>
+      <div class="pz-item"><strong>Experience</strong>30-min live set at an international music event in Baku — flights + 5 nights hotel included</div>
+      <div class="pz-item"><strong>Mentorship</strong>6-month ongoing mentorship with a DJ Academy Baku instructor</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>Pioneer DDJ-400 + 3-month Ableton subscription</div>
+      <div class="pz-item"><strong>Network</strong>Introduction to DJ Academy Baku professional community</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>Numark Mixtrack Pro + 1-year online DJ course</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🎨</span>
+      <div class="pz-track">Digital Art & Illustration</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>iPad Air + Apple Pencil + Procreate (~$700)</div>
+      <div class="pz-item"><strong>Exhibition</strong>Solo feature at regional digital art show + NFT setup</div>
+      <div class="pz-item"><strong>Fund</strong>$800 seed grant for creative business launch</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>Wacom Intuos Pro M + 1-year Adobe Creative Cloud</div>
+      <div class="pz-item"><strong>Platform</strong>Featured artist on African design marketplace — 3 months</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>Wacom Intuos S + Procreate + portfolio website (1 yr)</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🤖</span>
+      <div class="pz-track">AI Creative Tools</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Fund</strong>$1,500 product development grant for AI creative product</div>
+      <div class="pz-item"><strong>Incubation</strong>3-month spot in African tech incubator</div>
+      <div class="pz-item"><strong>Tools</strong>1-year: Midjourney Pro + Runway + Claude Pro</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Fund</strong>$600 + $200 cloud credits for product testing</div>
+      <div class="pz-item"><strong>Exposure</strong>Feature in African tech newsletter (50K+ subscribers)</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>$300 + 6-month AI tools bundle + AI business course</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🎬</span>
+      <div class="pz-track">Video Content & Film</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>Sony ZV-E10 + DJI OM6 + lav mic kit (~$900)</div>
+      <div class="pz-item"><strong>Screening</strong>Film screened at African film festival + press pass</div>
+      <div class="pz-item"><strong>Fund</strong>$800 production grant for next film or pilot</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>GoPro Hero 12 + DaVinci Resolve Studio licence</div>
+      <div class="pz-item"><strong>Platform</strong>Distribution deal with African streaming platform</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>DJI Pocket 3 + CapCut Pro + YouTube growth workshop</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🎮</span>
+      <div class="pz-track">Game Design & Dev</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>Dev laptop RTX 3060, 16GB RAM (~$1,100)</div>
+      <div class="pz-item"><strong>Licence</strong>Unity Pro 1-year + $400 asset store credits</div>
+      <div class="pz-item"><strong>Fund</strong>$700 game dev grant + app store submission paid</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>27" gaming monitor + Godot certification</div>
+      <div class="pz-item"><strong>Platform</strong>Game featured on African gaming platform — 3 months</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>$300 + Unity Essentials + 1-year itch.io Pro</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🎤</span>
+      <div class="pz-track">Music Production</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>Audio interface + condenser mic + monitors + MIDI (~$900)</div>
+      <div class="pz-item"><strong>Experience</strong>Recording session at professional African studio</div>
+      <div class="pz-item"><strong>Distribution</strong>1-year DistroKid Musician Plus + sync licensing pitch</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>FL Studio All Plugins + headphones + interface</div>
+      <div class="pz-item"><strong>Promo</strong>$500 music video budget + 2 playlist campaigns</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>Logic Pro + 3-month production masterclass + DistroKid</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">📸</span>
+      <div class="pz-track">Photography & Storytelling</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Equipment</strong>Sony a6400 + 35mm lens + Lightroom + Capture One</div>
+      <div class="pz-item"><strong>Exhibition</strong>Solo photography show at gallery in host city</div>
+      <div class="pz-item"><strong>Assignment</strong>Paid editorial shoot with African NGO or media ($500)</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>Canon EOS R50 + kit lens + 2-year Adobe Photography Plan</div>
+      <div class="pz-item"><strong>Market</strong>Shutterstock contributor onboarding + licensing consult</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>Canon EOS M50 + Lightroom + portfolio website (1 yr)</div>
+    </div>
+
+    <div class="prize-card">
+      <span class="pz-icon">🛍️</span>
+      <div class="pz-track">Fashion & Textile</div>
+      <div class="pz-tier">🥇 Gold</div>
+      <div class="pz-item"><strong>Experience</strong>Runway showcase at Baku Fashion Week — flights + 6 nights hotel included</div>
+      <div class="pz-item"><strong>Fund</strong>$1,000 brand launch fund + Shopify store setup (1 year)</div>
+      <div class="pz-item"><strong>Mentorship</strong>6-month ongoing mentorship with a StockIn designer</div>
+      <div class="pz-tier">🥈 Silver</div>
+      <div class="pz-item"><strong>Equipment</strong>Professional sewing machine + $400 fabric voucher</div>
+      <div class="pz-item"><strong>Network</strong>Introduction to BFW and StockIn professional community</div>
+      <div class="pz-tier">🥉 Bronze</div>
+      <div class="pz-item"><strong>Prize</strong>$300 + CLO 3D 6-month licence + branded lookbook shoot</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ BUDGET ══════════════ -->
+<section id="s-budget" class="sec">
+  <div class="sec-label">Budget</div>
+  <h2 class="sec-title">Investment by Format.</h2>
+  <p class="sec-desc">Each format has its own financial logic. The online platform is permanently live — its higher upfront cost is offset by infinite scale and a dramatically lower cost per participant over time.</p>
+
+  <div class="budget-sum">
+    <div class="bs">
+      <div class="bs-lbl g">3-Month Sprint</div>
+      <div class="bs-amt g">$84,750</div>
+      <div class="bs-note">Per cohort of 35 youth<br><b>~$2,421 per participant</b><br>Incl. prizes, international trips & 10% management fee</div>
+    </div>
+    <div class="bs">
+      <div class="bs-lbl v">6-Month Ascent</div>
+      <div class="bs-amt v">$144,600</div>
+      <div class="bs-note">Per cohort of 50 youth<br><b>~$2,892 per participant</b><br>Incl. prizes, international trips & 10% management fee</div>
+    </div>
+    <div class="bs">
+      <div class="bs-lbl tl">Online Forever</div>
+      <div class="bs-amt tl">$204,100</div>
+      <div class="bs-note">One-time build + Year 1<br><b>~$20/user at 10,000 participants</b><br>Incl. prizes, virtual showcase & 10% management fee</div>
+    </div>
+  </div>
+
+  <table class="bt">
+    <thead>
+      <tr>
+        <th style="width:33%;">Line Item</th>
+        <th style="width:15%;" class="g">3-Month</th>
+        <th style="width:15%;" class="v">6-Month</th>
+        <th style="width:15%;" class="tl">Online</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="cat"><td colspan="5">Personnel & Instruction</td></tr>
+      <tr><td>Lead Track Instructors (8 tracks)</td><td class="ag">$14,400</td><td class="av">$28,800</td><td class="at">$19,200</td><td class="nt">$300/day. 3M: 6 days/wk. 6M: 4 days/wk. OL: video recording days.</td></tr>
+      <tr><td>Programme Manager</td><td class="ag">$3,600</td><td class="av">$7,200</td><td class="at">$8,400</td><td class="nt">$1,200/month. OL: 7 months Year 1.</td></tr>
+      <tr><td>Coordinators / Community Managers</td><td class="ag">$1,800</td><td class="av">$3,600</td><td class="at">$7,200</td><td class="nt">$300/month each. OL: 2 full-time moderators across time zones.</td></tr>
+      <tr><td>DJ Academy Baku faculty residency</td><td class="ag">$2,800</td><td class="av">$5,600</td><td class="at">$1,200</td><td class="nt">3M: 1 week in-country + online. 6M: 2 weeks. OL: 4 recorded masterclasses.</td></tr>
+      <tr><td>BFW + StockIn sessions</td><td class="ag">$1,200</td><td class="av">$2,400</td><td class="at">$900</td><td class="nt">Online sessions + 1 in-person workshop. Partly in-kind from partners.</td></tr>
+      <tr><td>Guest mentors & speakers</td><td class="ag">$2,400</td><td class="av">$4,800</td><td class="at">$3,600</td><td class="nt">$300/session · 8 (3M), 16 (6M), 12/yr (OL).</td></tr>
+
+      <tr class="cat"><td colspan="5">Infrastructure, Tools & Content</td></tr>
+      <tr><td>Software licences (all tracks)</td><td class="ag">$3,200</td><td class="av">$6,400</td><td class="at">$6,000</td><td class="nt">Adobe CC, FL Studio, Unity, AI tools. OL: institutional licensing.</td></tr>
+      <tr><td>Shared equipment loan pool</td><td class="ag">$8,000</td><td class="av">$8,000</td><td class="at">—</td><td class="nt">One-time purchase, reused across cohorts. Cameras, tablets, DJ gear, mics.</td></tr>
+      <tr><td>Venue / hub rental</td><td class="ag">$5,400</td><td class="av">$10,800</td><td class="at">—</td><td class="nt">$450/week for multi-room creative space.</td></tr>
+      <tr><td>Online platform build (LMS + community)</td><td class="ag">—</td><td class="av">—</td><td class="at">$32,000</td><td class="nt">Custom LMS, Discord integration, mobile-optimised, multilingual.</td></tr>
+      <tr><td>Video content production (160 modules)</td><td class="ag">—</td><td class="av">—</td><td class="at">$48,000</td><td class="nt">~160 modules × $300/module. Filming, editing, captions.</td></tr>
+      <tr><td>Platform hosting & maintenance (Year 1)</td><td class="ag">—</td><td class="av">—</td><td class="at">$7,200</td><td class="nt">Server, CDN for video, backups, monthly updates, SSL.</td></tr>
+      <tr><td>Data bundles for rural participants</td><td class="ag">—</td><td class="av">—</td><td class="at">$6,000</td><td class="nt">$10/month × 100 low-income participants × 6 months.</td></tr>
+
+      <tr class="cat"><td colspan="5">Participant Support</td></tr>
+      <tr><td>Stipends / transport support</td><td class="ag">$3,500</td><td class="av">$7,000</td><td class="at">—</td><td class="nt">~$10/day for ~50% of cohort. Inclusion-critical.</td></tr>
+      <tr><td>Meals during sessions</td><td class="ag">$2,520</td><td class="av">$5,040</td><td class="at">—</td><td class="nt">$3/person/day × cohort × session days.</td></tr>
+
+      <tr class="cat"><td colspan="5">Events, Prizes & International Experiences</td></tr>
+      <tr><td>Showcase / Demo Day production</td><td class="ag">$3,200</td><td class="av">$6,500</td><td class="at">$4,000</td><td class="nt">Venue, AV, catering, press. 6M: mid + finale. OL: virtual livestream.</td></tr>
+      <tr><td>Prize pool — all 8 tracks, all tiers</td><td class="ag">$18,000</td><td class="av">$28,000</td><td class="at">$14,000</td><td class="nt">Equipment, funds and experience prizes across Gold, Silver and Bronze for all 8 tracks. Fully programme-funded.</td></tr>
+      <tr><td>International experience trips — Gold winners</td><td class="ag">$6,400</td><td class="av">$6,400</td><td class="at">$3,200</td><td class="nt">Baku DJ set (Gold DJ winner) + BFW runway (Gold Fashion winner): return flights + hotel per person. Facilitated through AZ partner networks, funded by programme.</td></tr>
+
+      <tr class="cat"><td colspan="5">Communications & Overhead</td></tr>
+      <tr><td>Marketing & recruitment</td><td class="ag">$1,800</td><td class="av">$3,000</td><td class="at">$8,000</td><td class="nt">OL needs sustained digital marketing to drive enrolments at scale.</td></tr>
+      <tr><td>Materials, printing, certificates</td><td class="ag">$600</td><td class="av">$900</td><td class="at">$300</td><td class="nt">Workbooks, ID cards, certificates, welcome packs.</td></tr>
+      <tr><td>Monitoring, evaluation & reporting</td><td class="ag">$800</td><td class="av">$1,500</td><td class="at">$2,000</td><td class="nt">Data tools, impact surveys, quarterly funder reports.</td></tr>
+      <tr><td>Contingency (8%)</td><td class="ag">$5,572</td><td class="av">$9,636</td><td class="at">$13,068</td><td class="nt">8% buffer on all line items.</td></tr>
+
+      <tr class="cat"><td colspan="5">Host Organisation Fee</td></tr>
+      <tr>
+        <td>Management fee — host organiser</td>
+        <td class="ag">$7,450</td>
+        <td class="av">$12,800</td>
+        <td class="at">$18,300</td>
+        <td class="nt">10% of total programme budget. Covers overall programme coordination, stakeholder management, partner liaison, financial administration, legal compliance, and reporting to funders. Payable to the host organising entity.</td>
+      </tr>
+
+      <tr class="tot"><td>Total (incl. management fee)</td><td>≈ $84,750</td><td>≈ $144,600</td><td>≈ $204,100</td><td></td></tr>
+      <tr class="cph"><td>Cost per participant</td><td class="g">~$2,421</td><td class="v">~$2,892</td><td class="tl">~$82 at 2,500 · ~$20 at 10,000</td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="b-note">
+    <strong>Online Platform — Year 2+ Annual Running Cost</strong>
+    After the one-time build, the platform runs at ~$42,000–$52,000/year: Programme Manager ($14,400), 2 community moderators ($14,400), new content (4 AZ masterclasses + 8 updated modules at $14,400), platform maintenance ($7,200), data bundles ($6,000), annual virtual showcase ($4,000). The per-participant cost drops sharply with scale — at 10,000 users the total Year 1 investment falls to ~$20/person.
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div>
+    <div class="f-brand">Creative<br>Africa Rise</div>
+    <div class="f-meta">
+      2026 – 2030 · Pan-African Creative Economy<br>
+      Partners: DJ Academy Baku · Baku Fashion Week · StockIn AZ
+    </div>
+  </div>
+  <div class="f-right">
+    Replicable across: Kenya · Ghana · Rwanda<br>Senegal · Nigeria · South Africa · Ethiopia
+  </div>
+</footer>
+
+<script>
+(function () {
+  const nav = document.getElementById('nav');
+  const tabs = nav.querySelectorAll('.nav-tab');
+  const sectionIds = ['s-hero','s-overview','s-partners','s-tracks','s-formats','s-prizes','s-budget'];
+
+  function getActive() {
+    const navH = nav.getBoundingClientRect().height;
+    let active = null;
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      const el = document.getElementById(sectionIds[i]);
+      if (!el) continue;
+      if (el.getBoundingClientRect().top <= navH + 8) {
+        active = sectionIds[i];
+        break;
+      }
+    }
+    return active;
+  }
+
+  function update() {
+    const active = getActive();
+    tabs.forEach(tab => {
+      const href = tab.getAttribute('href').replace('#', '');
+      tab.classList.toggle('active', href === active);
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>
